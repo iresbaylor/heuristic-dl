@@ -1,0 +1,105 @@
+{"training_data":
+  [
+    {
+      "snippet":"while(true) {",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"do {",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"while(x > 0 && p)",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"for (int i = 0; i < 10; i++) {",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"for (i; lessThanCondition(i); i--) {",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"for (j = 10; j > 0; j--)",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"do",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"while (condition())",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"for (Elem x : list) {",
+      "lang":"Java",
+      "classification":"loop"
+    },
+    {
+      "snippet":"for (ArbitraryObjectInstance instance : arbitraryInstances)",
+      "lang":"Java",
+      "classification":"loop"
+    },
+
+    {
+      "snippet":"if(true) {",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"if(true){",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"if (x) ",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"} else if (i == 0 || condition2(i)) {",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"else if ((cond && cond2) || (otherThing(x) + thisThing(x << y) > 0))",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"else",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"} else",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"else {",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"if (!(conditionalStatementPredicate || predicatedOrStatementMethodCall(x, y, (ObjCast) z))) {",
+      "lang":"Java",
+      "classification":"conditional"
+    },
+    {
+      "snippet":"if (thing) int x = 10;",
+      "lang":"Java",
+      "classification":"conditional"
+    }
+  ]
+}

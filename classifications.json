@@ -1,0 +1,12 @@
+{
+  "classifications": [
+    "loop",
+    "conditional",
+    "method_call",
+    "assignment",
+    "creation",
+    "termination",
+    "switch",
+    "case"
+  ]
+}
