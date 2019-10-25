@@ -2,8 +2,11 @@
 % @author: Jonathan Simmons
 
 \documentclass{article}
-<<<<<<< HEAD
+
 \include{headers/mainheader}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[final]{pdfpages}
 %\usepackage{fullpage}
 %\usepackage{url}
 %\usepackage{hyperref}
@@ -26,32 +29,7 @@
 %\setlength{\parindent}{0in}
 %\setlength{\parskip}{0.1in}
 %\usepackage[final]{pdfpages}
-=======
 
-\usepackage{fullpage}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage[letterspace=150]{microtype}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{listing}
-\graphicspath{ {./images/} }
-
-\hypersetup{
-colorlinks=true,
-linkcolor=blue,
-filecolor=magenta,
-urlcolor=blue,
-}
-\urlstyle{same}
-% tell Latex to use no paragraph indentation, but leave some space between
-% paragraphs
-\setlength{\parindent}{0in}
-\setlength{\parskip}{0.1in}
-\usepackage[final]{pdfpages}
->>>>>>> b874c92aca8129e6f55d9b7b9eb9afdf61af429a
 
 \title{Iteration II}
 \date{10/24/19}
@@ -61,13 +39,36 @@ urlcolor=blue,
 
     \maketitle
 
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate conditions,
+    captionpos=b]{snippets/gen-cond.py}
 
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=conditionals.py,
+    captionpos=b]{snippets/conditionals.py}
 
-%    \lstinputlisting[mathescape=true, escapechar=\%, language=C, caption=fakewriter.c, captionpos=b]{source-code/fakewriter.c}
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=creating-training.py,
+    captionpos=b]{snippets/creating-training.py}
+
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=imports.py,
+    captionpos=b]{snippets/imports.py}
+
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=predicate.py,
+    captionpos=b]{snippets/predicate.py}
+
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=rading.py,
+    captionpos=b]{snippets/reading.py}
+
+    \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=conditionals.py,
+    captionpos=b]{snippets/running-model.py}
+
+    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/01.pdf}
+
+    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/02.pdf}
+
+    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/03.pdf}
 
 
     \section*{Summary}
-    \inputminted{python}{snippets/imports.py}
+
 
     \subsection*{Jonathan Simmons}
 
