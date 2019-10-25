@@ -54,11 +54,11 @@
     \begin{center}
         \begin{tabular}{||c c ||}
             \hline
-            Number of tasks: 7&  \\
+            Number of tasks: & 7  \\
             \hline
-            Number of commits: 16&  \\
+            Number of commits: & 16  \\
             \hline
-            Number of hours: 25.5&  \\
+            Number of hours: & 25.5  \\
             \hline
         \end{tabular}
     \end{center}
@@ -81,8 +81,6 @@
     \end{center}
 
     More to be found: \href{https://github.com/johnsimmons2/heuristic-dl/wiki/Worksheet:-Jan}{Worksheet - Jan}
-
-
 
     \section{Summary}
     \textbf{Problem Statement}\\
@@ -187,7 +185,7 @@
     The following code snippet shows the algorithm for creating a code line containing a conditional (if, else, else if) via the generate conditional and generate predicate.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate a code snippet that is conditional,
     captionpos=b]{snippets/gen-cond.py}
-
+    \newpage
     The following snippet shows the algorithm for creating a randomized conditional (a term or argument in a predicate) using "ralph" and "Ralph" which are arrays of characters a - z both uncapitalized and capitalized respectively.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate a random conditional,
     captionpos=b]{snippets/conditionals.py}
@@ -199,7 +197,7 @@
     The following is merely a list of the imported dependencies thus-far.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=imported libraries,
     captionpos=b]{snippets/imports.py}
-
+    \newpage
     This snippet generates a random predicate by conjoining conditionals in an array.
     For example, given conditionals X and Y, we could produce "X \&\& Y".
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate random predicate,
@@ -208,7 +206,7 @@
     Here we read from the settings yaml file to find the classification types and training data and put it into numpy arrays.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=reading the training and classification sets,
     captionpos=b]{snippets/reading.py}
-
+    \newpage
     And finally, this is the snippet involving the actual model and training of it.
     The input has 128 neurons, as we are tokenizing each input into an array of 128 tokens.
     This is a naive approach for creating a neural network merely to attempt some results.
