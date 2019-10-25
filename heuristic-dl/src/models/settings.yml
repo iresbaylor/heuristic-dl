@@ -1,0 +1,5 @@
+resources: resources
+training_data: resources/training_data.json
+classifications: resources/classifications.json
+epochs: 120
+batch_size: 20
