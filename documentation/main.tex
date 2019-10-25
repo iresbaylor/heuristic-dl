@@ -11,6 +11,7 @@
 \usepackage[letterspace=150]{microtype}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{listing}
 \graphicspath{ {./images/} }
 
 \hypersetup{
@@ -35,9 +36,10 @@ urlcolor=blue,
     \maketitle
 
 
-
+    \lstinputlisting[language=Python]{snippets/imports.py}
 
     \section*{Summary}
+    \inputminted{python}{snippets/imports.py}
 
     \subsection*{Jonathan Simmons}
 
