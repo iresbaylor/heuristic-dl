@@ -1,0 +1,81 @@
+Problem Statement
+    Problem: Code clone tools are
+    1. depended on a parser that parses the language
+    2. depended on a language specification that evolves
+
+    Proposed solution:
+    1) Use classification based on deep learning
+    2) Label each line of code as variable assignment, method call, etc
+    3) Group code segments through deep learning
+    4) Maximize interesting code snippets by maximizing entropy
+
+    Benefits:
+    1) Building and running a model is faster than writing or running a parser
+
+    Application:
+    1) Search for some patterns in classified code
+
+    Benefits:
+    1) Increase semantic code clone detection efficiency by reducing the codebase to be analyzed
+    We pose that while running this learning model will take time t1 on a system S1 and running a semantic code clone detection algorithm on system S1 will take time t2 and that though the overall composite time cost is t1+ t2, eventually, as the model decreases the size of S1 and in turn t2> t3 , the new composite speed will be quicker: t1+ t2> t1+ t3 .
+    or that there will exist a point in which running both this model and a given semantic code clone detection algorithm in tandem will be quicker than running just a semantic code clone detection algorithm.
+
+Proposed Approach Overview
+    1) Classify code
+    2) Find interesting parts of code
+    3) Compare interesting parts of code by standard techniques
+
+Theoretical Classifications for Lines of Code
+    1) Stereotypes per line of code
+    2) Variable and method associations
+
+    Weigh stereotypes by how much they could impact entropy (e.g. method calls have more behavior and information than assigning to an integer)
+
+    Uninteresting Stereotypes:
+    - Import statements
+    - Printing
+    - Logging
+    - etc.
+
+Finding Interesting Code segments
+    Deriving interesting part out of code snippets, sanitize from the pool those segments which contain solely uninteresting segments (from the labeling).
+
+    Segments that contain highly repetitive patterns that provide no meaningful semantics (low entropy):
+    1  assignment::primitive
+    2  assignment::primitive
+    3  assignment::primitive
+    4  assignment::primitive
+
+Problems to Address
+    How do we single out segments to determine their entropy and in turn interest value?
+    Greedy approach of moving the selection window up and down increasing height to get maximum entropy. If the maximum entropy was found previously at a smaller height, decrease.
+    We let the algorithm find the boundary of the window by learning what is considered interesting with respect to our classifications and example code.
+
+    We will then supply a standard semantic code clone detection software with this subset of code segments gathered from our deep learning model.
+
+
+Current Status
+    - A basic set of classifications for prototyping (single layer)
+    - A 4 layer sequential neural network (128 x 128 x 128 x 2). The input fires up to 128 neurons for a line length maximum of 128, based on token recognition.
+        - Benefit: Easy to produce network
+        - Down-side: Token based, recognition is based solely on largeness of dataset size
+    - 2 output neurons ((0.23, 0.77) -> %23 loop, %77 conditional)
+    - 4,000 auto generated loop / conditional statements for testing
+
+Current Progress Direction
+    Our v1 prototype classifications
+    -Loop, Conditional
+    Once v1 is verified, expand to v2
+    -Loop, Conditional, Method Call, Assignment, Creation of new object, Termination, Switch, Case, Lambda, Inline
+    Once v2 is verified, expand to v3
+    -Convolution / filtering for Assignment::primitive, Assignment::object, Creation::new, Creation::method etc.
+
+Future Work
+    The case of multiple, separate, interesting segments in a single method
+    - Currently we search for the maximum possible entropy of one code segment per method. What if a method performs two distinct and low cohesion behaviors?
+    Run the experiment and prove that there is some substantive speedup when running our model + traditional semantic code clone detection
+    Tweak our classifications and weights for best results
+    Train the model based on word associations rather than tokens
+    - Experimentally we showed with predictable predicate names, accuracy dramatically increased.
+        - Tokenize - lose language agnostic property
+        - Word association - keep agnosticism, gain accuracy, reduce loss
