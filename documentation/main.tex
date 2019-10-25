@@ -2,6 +2,7 @@
 % @author: Jonathan Simmons
 
 \documentclass{article}
+<<<<<<< HEAD
 \include{headers/mainheader}
 %\usepackage{fullpage}
 %\usepackage{url}
@@ -25,6 +26,32 @@
 %\setlength{\parindent}{0in}
 %\setlength{\parskip}{0.1in}
 %\usepackage[final]{pdfpages}
+=======
+
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[letterspace=150]{microtype}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{listing}
+\graphicspath{ {./images/} }
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=blue,
+}
+\urlstyle{same}
+% tell Latex to use no paragraph indentation, but leave some space between
+% paragraphs
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.1in}
+\usepackage[final]{pdfpages}
+>>>>>>> b874c92aca8129e6f55d9b7b9eb9afdf61af429a
 
 \title{Iteration II}
 \date{10/24/19}
@@ -39,8 +66,8 @@
 %    \lstinputlisting[mathescape=true, escapechar=\%, language=C, caption=fakewriter.c, captionpos=b]{source-code/fakewriter.c}
 
 
-
     \section*{Summary}
+    \inputminted{python}{snippets/imports.py}
 
     \subsection*{Jonathan Simmons}
 
