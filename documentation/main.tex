@@ -54,11 +54,11 @@
     \begin{center}
         \begin{tabular}{||c c ||}
             \hline
-            Number of tasks: &  \\
+            Number of tasks: 7&  \\
             \hline
-            Number of commits: &  \\
+            Number of commits: 16&  \\
             \hline
-            Number of hours: &  \\
+            Number of hours: 25.5&  \\
             \hline
         \end{tabular}
     \end{center}
@@ -113,14 +113,14 @@
 
     \textbf{Proposed Approach Overview}
     \begin{enumerate}
-        \item Classify code
+        \item Classify code (See Image 2)
         \item Find interesting parts of code
         \item Compare interesting parts of code by standard techniques
     \end{enumerate}
 
     \textbf{Theoretical Classifications for Lines of Code}
     \begin{itemize}
-        \item Stereotypes lines of code
+        \item Stereotypes lines of code (See Image 3)
         \item Variable and method associations
     \end{itemize}
     We will weight stereotypes by how much they could impact entropy (e.g. method calls have more behavior and information than assigning to an integer)
@@ -134,7 +134,7 @@
     \end{itemize}
 
     \textbf{Finding Interesting Code segments}\\
-    Deriving interesting part out of code snippets, sanitize from the pool those segments which contain solely uninteresting segments (from the labeling).
+    Deriving interesting part out of code snippets (See Image 1), sanitize from the pool those segments which contain solely uninteresting segments (from the labeling).
 
     Segments, such as the following, that contain highly repetitive patterns that provide no meaningful semantics will be filtered out (low entropy):
     \begin{lstlisting}
@@ -217,32 +217,10 @@
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=creating and running the keras model training,
     captionpos=b]{snippets/running-model.py}
 
+    \includepdf[pages=-,pagecommand={\section*{Image 1: Example of Interesting Code Segment}\label{}},width=\textwidth]{images/01.pdf}
 
-    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/01.pdf}
+    \includepdf[pages=-,pagecommand={\section*{Image 2: Example of Nested Classification Types}},width=\textwidth]{images/02.pdf}
 
-    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/02.pdf}
-
-    \includepdf[pages=-,pagecommand={},width=\textwidth]{images/03.pdf}
-
-    \section{Worksheets}
-
-
-    \subsection*{Jonathan Simmons}
-
-    \begin{center}
-        \begin{tabular}{||c c ||}
-            \hline
-            Number of tasks: &  \\
-            \hline
-            Number of commits: &  \\
-            \hline
-            Number of hours: &  \\
-            \hline
-        \end{tabular}
-    \end{center}
-
-    \subsection*{Jan Svacina}
-
-
+    \includepdf[pages=-,pagecommand={\section*{Image 3: Example of Classified Lines of Code}},width=\textwidth]{images/03.pdf}
 
 \end{document}
