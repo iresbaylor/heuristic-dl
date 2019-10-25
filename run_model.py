@@ -12,7 +12,7 @@ from cil_utils import read_classifications_file, read_training_data_file, get_ru
 
 model = load_model('learning-model-' + str(get_running_iteration() - 1))
 
-example = ['while (x == 10 || y >= 11 && z())', 'if (x == 10 || y >= 11 && z())', 'else if (x > 0 && p) {']
+example = ['while (yv88Mum7wy > tk3 != nz1XW79xEuk > hqx139s > vzk7Dg9Z40)', 'else if (avD6TkGf920 == yv25zKYB8 > rnn41v2vgH)', 'else if (x > 0 && p) {']
 
 tk = Tokenizer()
 tk.fit_on_texts(example)

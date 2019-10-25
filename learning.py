@@ -38,9 +38,9 @@ print('---')
 print(ydata)
 
 model = Sequential()
-model.add(Dense(64, activation='relu', input_dim=128))
+model.add(Dense(128, activation='relu', input_dim=128))
 model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
+model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(2, activation='softmax'))
 
@@ -53,5 +53,5 @@ print("X_TRAIN SHAPE: " + str(np.array(x_train).shape))
 print("YDATA SHAPE: " + str(np.array(ydata).shape))
 
 ydata = to_categorical(ydata)
-model.fit(x_train, ydata, epochs=100, batch_size=20)
+model.fit(x_train, ydata, epochs=180, batch_size=10)
 model.save("learning-model-" + str(get_add_running_iteration()))
