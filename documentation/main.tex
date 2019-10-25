@@ -131,25 +131,36 @@
     - Word association - keep agnosticism, gain accuracy, reduce loss\\
 
     \section{References}
-    This section shows
+    This section shows images and code snippets pertaining to the current status of the project in Iteration II. \\
+
+    The following code snippet shows the algorithm for creating a code line containing a conditional (if, else, else if) via the generate conditional and generate predicate.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate a code snippet that is conditional,
     captionpos=b]{snippets/gen-cond.py}
 
+    The following snippet shows the algorithm for creating a randomized conditional (a term or argument in a predicate) using "ralph" and "Ralph" which are arrays of characters a - z both uncapitalized and capitalized respectively.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate a random conditional,
     captionpos=b]{snippets/conditionals.py}
 
+    After reading the training data, create an array of the code snippets with what their respective classification is (in this case just loop or conditional), and an array of the possible classifications.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=format the json files to code snippet vs. classification,
     captionpos=b]{snippets/creating-training.py}
 
+    The following is merely a list of the imported dependencies thus-far.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=imported libraries,
     captionpos=b]{snippets/imports.py}
 
+    This snippet generates a random predicate by conjoining conditionals in an array.
+    For example, given conditionals X and Y, we could produce "X && Y".
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate random predicate,
     captionpos=b]{snippets/predicate.py}
 
+    Here we read from the settings yaml file to find the classification types and training data and put it into numpy arrays.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=reading the training and classification sets,
     captionpos=b]{snippets/reading.py}
 
+    And finally, this is the snippet involving the actual model and training of it.
+    The input has 128 neurons, as we are tokenizing each input into an array of 128 tokens.
+    This is a naive approach for creating a neural network merely to attempt some results.
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=creating and running the keras model training,
     captionpos=b]{snippets/running-model.py}
 
