@@ -104,12 +104,17 @@
 
     \textbf{Current Status}
     \begin{itemize}
-        \item A basic set of classifications for prototyping (single layer)
-        \item A 4 layer sequential neural network (128 x 128 x 128 x 2). The input fires up to 128 neurons for a line length maximum of 128, based on token recognition.
+        \item A basic set of classifications for prototyping (single layer) (See Listing 4 for dependencies)
+        \item A 4 layer sequential neural network (128 x 128 x 128 x 2). The input fires up to 128 neurons for a line length maximum of 128, based on token recognition. Refer to Listing 7.
         \item Benefit: Easy to produce network
         \item Down-side: Token based, recognition is based solely on largeness of dataset size
         \item 2 output neurons ((0.23, 0.77) -> %23 loop, %77 conditional)
-        \item 4,000 auto generated loop / conditional statements for testing
+        \item 4,000 auto generated loop / conditional statements for testing (Refer to Listing 1)
+        \begin{itemize}
+            \item Generated random conditionals (Refer to Listing 2)
+            \item Create a randomized predicate via the conditional (Refer to Listing 5)
+            \item Compose predicates to randomized loop or conditional statement (Refer to Listing 1)
+        \end{itemize}
     \end{itemize}
 
     \textbf{Current Progress Direction} \\
@@ -150,7 +155,7 @@
     captionpos=b]{snippets/imports.py}
 
     This snippet generates a random predicate by conjoining conditionals in an array.
-    For example, given conditionals X and Y, we could produce "X && Y".
+    For example, given conditionals X and Y, we could produce "X \&\& Y".
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=generate random predicate,
     captionpos=b]{snippets/predicate.py}
 
@@ -164,12 +169,12 @@
     \lstinputlisting[mathescape=true, escapechar=\%, language=python, caption=creating and running the keras model training,
     captionpos=b]{snippets/running-model.py}
 
+
     \includepdf[pages=-,pagecommand={},width=\textwidth]{images/01.pdf}
 
     \includepdf[pages=-,pagecommand={},width=\textwidth]{images/02.pdf}
 
     \includepdf[pages=-,pagecommand={},width=\textwidth]{images/03.pdf}
-
 
     \section{Worksheets}
 
