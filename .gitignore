@@ -5,3 +5,6 @@ documentation/main.pdf
 documentation/main.out
 .idea
 *.iml
+*.aux
+*.log
+*.out

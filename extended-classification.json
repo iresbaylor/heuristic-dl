@@ -1,0 +1,29 @@
+{
+  "classifications": [
+    "conditional":[
+      "ternary",
+      "else",
+      "if",
+      "else-if",
+    ],
+    "block-end",
+    "loop":[
+      "do",
+      "while",
+      "for",
+      "foreach",
+    ],
+    "primitive-assignment",
+    "object-creation":[
+      "via-new",
+      "via-method-call"
+    ],
+    "method-call":[
+      "static-method",
+      "external-static-method",
+      "member-function",
+      "external-member-function"
+    ],
+    "lambda-other"
+  ]
+}
